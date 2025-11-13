@@ -4,6 +4,7 @@ import AppPractice from "./AppPractice"
 import AppTest from "./AppTest"
 import AppAPI from "./AppAPI"
 import AppState from "./AppState"
+import AppRouter from "./AppRouter"
 
 /**
  * App Selector - Choose which demo to view
@@ -35,6 +36,7 @@ function AppSelector() {
                     <option value="advanced-components">Advanced React Components Practice</option>
                     <option value="api-integration">API Integration & Data Fetching</option>
                     <option value="state-management">State Management Patterns</option>
+                    <option value="react-router">React Router & Navigation</option>
                 </select>
             </div>
             
@@ -42,6 +44,7 @@ function AppSelector() {
             {selectedApp === "advanced-components" && <AppPractice />}
             {selectedApp === "api-integration" && <AppAPI />}
             {selectedApp === "state-management" && <AppState />}
+            {selectedApp === "react-router" && <AppRouter />}
         </>
     )
 }
