@@ -3,6 +3,7 @@ import { useState } from "react"
 import AppPractice from "./AppPractice"
 import AppTest from "./AppTest"
 import AppAPI from "./AppAPI"
+import AppState from "./AppState"
 
 /**
  * App Selector - Choose which demo to view
@@ -33,12 +34,14 @@ function AppSelector() {
                     <option value="form-validation">Form Validation Demo</option>
                     <option value="advanced-components">Advanced React Components Practice</option>
                     <option value="api-integration">API Integration & Data Fetching</option>
+                    <option value="state-management">State Management Patterns</option>
                 </select>
             </div>
             
             {selectedApp === "form-validation" && <AppTest />}
             {selectedApp === "advanced-components" && <AppPractice />}
             {selectedApp === "api-integration" && <AppAPI />}
+            {selectedApp === "state-management" && <AppState />}
         </>
     )
 }
