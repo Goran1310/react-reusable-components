@@ -28,46 +28,47 @@ export default function AppPractice() {
                 </h1>
                 
                 {/* Alerts Section */}
-                <section style={{ marginBottom: "3rem" }}>
-                    <h2>Alerts & Notifications</h2>
-                    {showAlert && (
-                        <Alert 
-                            type="success" 
-                            dismissible 
-                            onClose={() => setShowAlert(false)}
-                        >
-                            Welcome! You've successfully loaded the practice app.
+                <Card title="System Notifications & Alerts" className="mb-4">
+                    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                        {showAlert && (
+                            <Alert 
+                                type="success" 
+                                dismissible 
+                                onClose={() => setShowAlert(false)}
+                            >
+                                <strong>System Status:</strong> Application initialized successfully. All components are operational and ready for use.
+                            </Alert>
+                        )}
+                        <Alert type="info">
+                            <strong>Configuration Update:</strong> New features and performance improvements are now available. Please review the documentation for best practices and implementation guidelines.
                         </Alert>
-                    )}
-                    <Alert type="info">
-                        This is an informational message with useful tips.
-                    </Alert>
-                    <Alert type="warning">
-                        Warning: This action cannot be undone!
-                    </Alert>
-                    <Alert type="error" showIcon={false}>
-                        Error: Something went wrong. Please try again.
-                    </Alert>
-                </section>
+                        <Alert type="warning">
+                            <strong>Action Required:</strong> This operation will permanently modify system configurations and cannot be reversed. Please ensure you have a backup before proceeding.
+                        </Alert>
+                        <Alert type="error" showIcon={false}>
+                            <strong>Service Unavailable (Error 500):</strong> The requested service is temporarily unavailable due to maintenance. Please contact your system administrator or retry in a few moments.
+                        </Alert>
+                    </div>
+                </Card>
                 
                 {/* Icons Section */}
                 <Card title="Icon Component" className="mb-4">
-                    <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-                        <div style={{ textAlign: "center" }}>
+                    <div style={{ display: "flex", gap: "2rem", alignItems: "center", flexWrap: "wrap" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                             <Icon name="check" size="small" />
-                            <p style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>Small</p>
+                            <p style={{ fontSize: "0.9rem", margin: 0 }}>Small</p>
                         </div>
-                        <div style={{ textAlign: "center" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                             <Icon name="heart" color="red" size="medium" />
-                            <p style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>Medium</p>
+                            <p style={{ fontSize: "0.9rem", margin: 0 }}>Medium</p>
                         </div>
-                        <div style={{ textAlign: "center" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                             <Icon name="star" color="#FFD700" size="large" />
-                            <p style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>Large</p>
+                            <p style={{ fontSize: "0.9rem", margin: 0 }}>Large</p>
                         </div>
-                        <div style={{ textAlign: "center" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                             <Icon name="close" color="#dc3545" size="medium" />
-                            <p style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>Close</p>
+                            <p style={{ fontSize: "0.9rem", margin: 0 }}>Close</p>
                         </div>
                     </div>
                 </Card>
