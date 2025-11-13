@@ -406,3 +406,42 @@ main > h1 {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Tabs Component */
+.tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #282D35;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #adb5bd;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.tab:hover {
+    color: #f8f9fa;
+    background-color: rgba(97, 218, 251, 0.05);
+}
+
+.tab.active {
+    color: #61DAFB;
+    border-bottom-color: #61DAFB;
+    background-color: rgba(97, 218, 251, 0.1);
+    font-weight: 600;
+}
+
+.tab-content {
+    animation: fadeIn 0.3s ease-in;
+}

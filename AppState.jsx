@@ -136,7 +136,7 @@ function TemperatureInput({ scale, temperature, onTemperatureChange }) {
   
   return (
     <div className="form-group">
-      <label>Temperature in {scaleNames[scale]}</label>
+      <label style={{ display: "inline", marginRight: "10px" }}>Temperature in {scaleNames[scale]}</label>
       <input
         type="number"
         value={temperature}
@@ -344,7 +344,7 @@ function CustomHooksDemo() {
       <p className="text-secondary">Reusable logic with custom hooks</p>
       
       <div className="form-group">
-        <label>useLocalStorage Hook</label>
+        <label style={{ display: "inline", marginRight: "10px" }}>useLocalStorage Hook</label>
         <input
           type="text"
           value={name}
